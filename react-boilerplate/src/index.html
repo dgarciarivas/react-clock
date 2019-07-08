@@ -1,6 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<style>
+		:root {
+		  --hour-color: black;
+		  --minute-color: grey;
+		  --second-color: #0021A5;
+		 --inner-circle: #FF4A00;
+		  --deg-sec: 0deg;
+		  --deg-min: 0deg;
+		  --deg-hour: 0deg;
+		}
+
+		.clock{
+				border-radius: 50%;
+				background: transparent;
+				border: 2px solid ;
+				width: 500px;
+				height: 500px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+		  	  }
+		 .o180{
+		 	
+      background-image: linear-gradient(-90deg,  var(--bar-color) 50%,transparent 50%), linear-gradient(var(--deg), transparent 50%, var(--bar-color) 50%);        
+  
+  			   }
+		 .u180{
+			background-image: linear-gradient( var(--deg), transparent 50%, white 50%),linear-gradient(-90deg, var(--bar-color) 50%, transparent 50%); 				
+		}
+		.hours-indicator{	
+				--deg: var(--deg-hour);
+				--bar-color: var(--hour-color);
+				border-radius: 50%;
+				border: 1px none #333;
+				height: 250px;
+				width: 250px;
+				background-color: white;
+			}
+		.min-indicator{
+				--deg: var(--deg-min);
+          		--bar-color: var(--minute-color);
+				border-radius: 50%;
+				border: 1px none #333;
+
+				height: 200px;
+				width: 200px;
+				background-color: white;
+			}
+		.sec-indicator{
+				--deg: var(--deg-sec);
+				--bar-color: var(--second-color);
+				border-radius: 50%;
+				border: 1px none #333;
+				
+				height: 150px;
+				width: 150px;
+				background-color: white;
+					
+		}
+		.time-text{
+				-deg: var(--deg-sec);
+				--bar-color: var(--inner-circle);
+				color: white;
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				ackground-color: white;
+				
+		}
+		p.clock-text {
+			line-height: .1em;
+			}
+		p#date{
+				padding: 2px;
+		}
+		p#weekday{
+			padding-top: 20px;
+		}
+	</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
